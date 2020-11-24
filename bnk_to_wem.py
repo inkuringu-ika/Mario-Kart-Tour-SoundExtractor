@@ -17,6 +17,7 @@ for file_path in glob.glob("./input_nabe/b/*"):
             out = file_byte[start_byte:end_byte]
             with open("./output_nabe/" + os.path.basename(file_path) + "_" + str(match_index) + '.wem', 'bw') as f:
                 f.write(out)
+                f.close()
             offset = end_byte
         else:
             break
